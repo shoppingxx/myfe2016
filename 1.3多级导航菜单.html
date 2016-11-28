@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>come on!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .main-menu{
+            float: left;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+            display: block;
+        }
+        .main-menu>a{
+            background: #cccccc;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        #menu .sub-menu{
+            display: none;
+            background: #eeeeee;
+            width: 120px;
+        }
+        #menu .sub-menu li{
+            border-bottom: 1px dotted #000;
+        }
+        #menu .sub-menu li a{
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li class="main-menu">
+        <a href="#">11111</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.qq.com">111</a></li>
+            <li><a href="#">112</a></li>
+            <li><a href="#">113</a></li>
+        </ul>
+    </li>
+    <li class="main-menu">
+        <a href="#">22222</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.taobao.com">211</a></li>
+            <li><a href="#">212</a></li>
+            <li><a href="#">213</a></li>
+        </ul>
+    </li>
+    <li class="main-menu">
+        <a href="#">33333</a>
+        <ul class="sub-menu">
+            <li><a href="http://www.github.com">311</a></li>
+            <li><a href="#">312</a></li>
+            <li><a href="#">313</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+    var oMenu = document.getElementById('menu');
+    var aLi = oMenu.children;
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].onmouseover = function(){
+            this.children[1].style.display='block';
+        };
+        aLi[i].onmouseout = function(){
+            this.children[1].style.display='none';
+        };
+    }
+
+</script>
+</body>
+</html>
