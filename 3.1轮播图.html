@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 680px;
+            height: 344px;
+            position: relative;
+            margin: 50px auto;
+        }
+        #contain{
+            width: 680px;
+            height: 344px;
+            position: relative;
+        }
+        #container li{
+            float: left;
+            background: #000000;
+            color: #ffffff;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            text-align: center;
+            cursor:pointer;
+        }
+        #container ul{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        #arrow span{
+            float: left;
+            background: #000000;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+            cursor:pointer;
+        }
+        #left{
+            left: 20px;
+        }
+        #right{
+            left:55px;
+        }
+        #contain .selected{
+            display: block;
+        }
+        #contain img{
+            display: none;
+        }
+        #container ul .selected{
+            background:orange;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="contain">
+        <img class="selected" src="img/1.jpg" alt=""/>
+        <img src="img/2.jpg" alt=""/>
+        <img src="img/3.jpg" alt=""/>
+        <img src="img/4.jpg" alt=""/>
+    </div>
+    <ul>
+        <li class="selected">01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+    </ul>
+    <div id="arrow">
+        <span id="left">&lt;</span>
+        <span id="right">&gt;</span>
+    </div>
+</div>
+<script>
+    var oContainer = document.getElementById("container");
+    var aLi = oContainer.getElementsByTagName("li");
+    var oContain = document.getElementById("contain");
+    var aImg = oContain.getElementsByTagName("img");
+    var oLeft = document.getElementById("left");
+    var oRight = document.getElementById("right");
+    var iNow = 0;
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index = i;
+        aLi[i].onmouseover = function(){
+            changeImg(this.index);
+            iNow = this.index;
+        };
+    }
+    oLeft.onclick = function(){
+        iNow--;
+        iNow = (iNow+aLi.length) % aLi.length;
+        changeImg(iNow);
+    };
+    oRight.onclick = function(){
+        iNow++;
+        iNow = iNow % aLi.length;
+        changeImg(iNow);
+    };
+    function changeImg(index){
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].className = "";
+            aImg[i].className = "";
+        }
+        aLi[index].className = "selected";
+        aImg[index].className = "selected";
+    }
+    var timer ;
+    autoRun();
+    oContainer.onmouseover = function(){
+        clearInterval(timer);
+    };
+    oContainer.onmouseout = function(){
+        autoRun();
+    };
+    function autoRun(){
+        timer = setInterval(function(){
+            oRight.onclick();
+        },1000);
+    }
+</script>
+</body>
+</html>
