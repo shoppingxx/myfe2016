@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #menu{
+            width: 150px;
+        }
+        #menu .main-menu{
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #menu .sub-menu{
+            border: 1px dotted #000000;
+            display: none;
+        }
+        #menu h3{
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li class="main-menu">
+        <h3>haha</h3>
+        <ul class="sub-menu">
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+        </ul>
+    </li>
+    <li class="main-menu">
+        <h3>haah</h3>
+        <ul class="sub-menu">
+            <li>223</li>
+            <li>223</li>
+            <li>223</li>
+            <li>223</li>
+        </ul>
+    </li>
+</ul>
+<script>
+    var oMenu = document.getElementById("menu");
+    var aH3 = oMenu.getElementsByTagName("h3");
+    var aSubMenu = oMenu.getElementsByTagName("ul");
+    for(i=0;i<aH3.length;i++){
+        aH3[i].bFlag=true;
+        aH3[i].index=i;
+        aH3[i].onclick = function(){
+            if(this.bFlag){
+                aSubMenu[this.index].style.display="block";
+            }else{
+                aSubMenu[this.index].style.display="none";
+            }
+            this.bFlag=!this.bFlag
+        };
+    }
+</script>
+</body>
+</html>
