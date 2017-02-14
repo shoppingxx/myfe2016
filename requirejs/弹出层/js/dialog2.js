@@ -1,5 +1,5 @@
 require.config({
-    path:{
+    paths:{
         "jquery":"js/jquery-1.12.4"
     }
 });
@@ -9,7 +9,7 @@ define(["jquery"],function($){
             width:500,
             height:300,
             title:"najiuzheyangba",
-            content:"gfbgfhbfg"
+            content:""
         }
         this.container = $('<div class="dialog-container"></div>');
         this.mask = $('<div class="dialog-mask"></div>');
@@ -24,8 +24,11 @@ define(["jquery"],function($){
         //console.log(123);
         $.extend(this.settings,obj);
         this.item.html(this.settings.title);
-        this.content.load(this.settings.content).css({
-            height:this.settings.height
+        if(this.settings.content){
+            this.content.load(this.settings.content);
+        }
+        this.content.css({
+            height:this.settings.height-30
         });
         $('body').append(this.container);
         this.container.append(this.mask).append(this.box);
