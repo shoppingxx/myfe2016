@@ -8,6 +8,8 @@ define(["jquery"],function($){
         this.arrowsNext = $(' <span class="carousel-arrows-next">&gt;</span>');
         this.defaultSettings = {
             selector:"body",
+            width:520,
+            height:280,
             imgs:[],
             buttonStyle:'square',//square
             arrowPos:'center',//center
@@ -34,6 +36,7 @@ define(["jquery"],function($){
         $("img",this.imgs).eq(0).addClass('selected');
         $('li',this.tab).eq(0).addClass('selected');
         this.arrows.append(this.arrowsPrev).append(this.arrowsNext);
+        this.container.css('height',this.defaultSettings.height);
         this.container.append(this.imgs).append(this.tab).append(this.arrows);
         $(this.defaultSettings.selector).append(this.container);
         var nowIndex = 0;

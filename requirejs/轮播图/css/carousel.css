@@ -1,12 +1,12 @@
 .carousel-container{
-    width: 520px;
-    height: 280px;
+    /*width: 520px;
+    height: 280px;*/
     /* background: #ff0000;*/
     position:relative;
 }
 .carousel-content{
-    width: 520px;
-    height: 280px;
+    /* width: 520px;
+     height: 280px;*/
     /* background: #ff0000;*/
 }
 .carousel-arrows-prev{
