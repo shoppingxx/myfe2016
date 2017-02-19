@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            width: 960px;
+            height: 100px;
+            background: #cccccc;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+        }
+        section{
+            width: 960px;
+            margin: 0 auto;
+        }
+        figure{
+            width: 960px;
+            margin: 0 auto;
+        }
+        img{
+            width: 960px;
+        }
+        #left{
+            width: 630px;
+            height: 300px;
+            float: left;
+            background: #ff0000;
+        }
+        #right{
+            width: 300px;
+            height: 300px;
+            float: right;
+            background: #00ff00;
+        }
+        #left,#right{
+            display: table;
+        }
+        p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        footer{
+            clear: both;
+        }
+        @media (max-width: 959px){
+            h3{
+                width: 100%;
+            }
+            section {
+                width: 100%;
+            }
+            figure{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+            #left{
+                width: 67%;
+            }
+            #right{
+                width: 30%;
+            }
+        }
+        @media (max-width: 480px) {
+            #left {
+                width: 100%;
+            }
+            #right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>页头</h3>
+    </header>
+    <nav>
+        <h3>导航</h3>
+    </nav>
+    <figure>
+        <img src="01.jpg" alt="">
+    </figure>
+    <section>
+        <aside id="left">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.
+            </p>
+        </aside>
+        <aside id="right">
+            <p>
+                Donec dolor arcu, interdum sed turpis faucibus, placerat ultricies felis. Donec pulvinar gravida rhoncus. Suspendisse vestibulum est eget dolor lobortis.
+            </p>
+        </aside>
+    </section>
+    <footer>
+        <h3>页脚</h3>
+    </footer>
+</body>
+</html>
