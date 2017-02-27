@@ -1,0 +1,247 @@
+/*banner开始*/
+.starbuck-banner{
+    background: url("../img/kv-desktop-cn-20161220150546.jpg");
+    width: 100%;
+    padding-top: 50%;
+    background-size:100% 100% ;
+    position: relative;
+    margin-top: 100px;
+}
+
+@media (max-width: 970px){
+    .starbuck-banner{
+        background: url("../img/kv-mobile-cn-20161221183518.jpg") no-repeat;
+        padding-top: 117%;
+        background-size:100% 100% ;
+    }
+    .starbuck-banner-btn {
+        display: none;
+    }
+    }
+.starbuck-banner-btn{
+    position: absolute;
+    width: 108px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    background: #b89f7a;
+    top:30%;
+    left: 50%;
+    margin-left: -54px;
+}
+
+
+/*banner结束*/
+
+
+/*container1开始*/
+.starbuck-container1{
+    background: rgb(16, 110, 75);
+    height: 222px;
+}
+
+
+/*container1结束*/
+
+
+/*container2开始*/
+.starbuck-container2{
+    height: 220px;
+    width: 100%;
+    background: #000000;
+    color: #fff;
+    position: relative;
+}
+.starbuck-container2 .card-content1{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    font-size: 18px;
+}
+
+.starbuck-container2 .card-content2{
+    margin-right: 20%;
+    float: right;
+    margin-top: 80px;
+}
+.starbuck-container2 .card-content3{
+    font-size: 26px;
+}
+
+.card-content2 .card {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    color: #a98e67;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 10px;
+    border: 2px solid #a98e67;
+}
+.card-content2 .card:hover{
+    background: #a98e67;
+    color: #fff;
+}
+.card-content2 .knowmore{
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    color:  #a98e67;
+
+}
+.starbuck-container2 .wrapper{
+    text-align: center;
+}
+@media (max-width: 748px){
+    .starbuck-container2{
+        height: 509px;
+    }
+    .starbuck-container2 .card-content1{
+        top: 0;
+        left: 0;
+        display: block;
+        height: 180px;
+        width: 100%;
+        text-align: center;
+        line-height: 180px;
+    }
+    .starbuck-container2 .card-content2{
+        width: 100%;
+        height: 329px;
+        margin-right: 0;
+        float: right;
+        margin-top: 180px;
+    }
+    .card-content2 .card {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+    .card-content2 .knowmore{
+        position: absolute;
+        bottom: 50px;
+        right: 20px;
+
+    }
+}
+
+
+/*container2结束*/
+
+
+
+/*contain3开始*/
+.starbuck-container3{
+    width: 100%
+}
+
+.starbuck-container3 .img1{
+    background: url("../img/c0b61dd8-e0ba-11e6-891e-e290b739eb5f.jpeg") no-repeat;
+    padding-top: 50%;
+    width: 50%;
+    background-size: 100% 100%;
+    float: left;
+}
+.starbuck-container3 .img2{
+    background: url("../img/grid-cover-1.jpg") no-repeat;
+    padding-top: 50%;
+    width: 50%;
+    background-size: 100% 100%;
+    float: right;
+}
+@media (max-width: 744px) {
+    .starbuck-container3 .img1,.starbuck-container3 .img2{
+        padding-top: 100%;
+        width: 100%;
+    }
+}
+
+
+/*container3结束*/
+
+
+/*coontainer4开始*/
+.starbuck-container4{
+    clear: both;
+    height: 608px;
+    background: #000000;
+    display: -webkit-box;
+}
+.starbuck-container4 .img3{
+    /*background: url("../img/reserve-coffee-20161214180220.png") no-repeat;*/
+    width: 488px;
+    height: 528px;
+    margin-left: 5%;
+    /*float: left;*/
+    margin-top: 3%;
+}
+.starbuck-container4 .starbuck-container4-content{
+    color: #fff;
+
+}
+.starbuck-container4-knowemore,.starbuck-container4-buy{
+    display: inline-block;
+    width: 144px;
+    height: 50px;
+    color: #a98e67;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    border: 2px solid #a98e67;
+}
+.starbuck-container4 .starbuck-container4-titlt{
+    color: #a98e67;
+    display: block;
+    margin-top: 20%;
+}
+.starbuck-container4 .starbuck-container4-content{
+    font-size: 26px;
+    display: block;
+    margin: 20px;
+}
+.starbuck-container4 .warpper {
+    -webkit-box-flex: 1;
+
+    /*float: right;*/
+    height: 608px;
+    /*width: 50%;*/
+    text-align: center;
+    /*margin-right: 3%;*/
+}
+
+@media (max-width:970px) {
+    .starbuck-container4{
+        height: 703px;
+        width: 100%;
+    }
+    .starbuck-container4 .img3{
+        width: 480px;
+        height: 528px;
+        margin-left: 0;
+
+    }
+}
+
+@media (max-width: 744px) {
+    .starbuck-container4{
+        height: 100%;
+        display: block;
+        float: left;
+    }
+    .starbuck-container4 .img3{
+        width: 80%;
+        height: 80%;
+    }
+    .starbuck-container4 .starbuck-container4-titlt{
+        margin-top: 10px;
+    }
+    .starbuck-container4-knowemore,.starbuck-container4-buy{
+        width: 80%;
+    }
+    .starbuck-container4 .warpper{
+        height: 100%;
+    }
+}
+/*container4结束*/
+
+
